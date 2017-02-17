@@ -90,12 +90,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/17/bootstrap-autocomplete/index.html">
 <meta property="og:site_name" content="LICHENֹ">
 <meta property="og:description" content="先上效果图">
-<meta property="og:image" content="http://yoursite.com/image/temp.png">
-<meta property="og:updated_time" content="2017-02-17T07:21:13.463Z">
+<meta property="og:image" content="http://yoursite.com/ssn1125.win/temp.png">
+<meta property="og:updated_time" content="2017-02-17T07:30:18.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Boostrap之文本框输入提示 - Autocomplete">
 <meta name="twitter:description" content="先上效果图">
-<meta name="twitter:image" content="http://yoursite.com/image/temp.png">
+<meta name="twitter:image" content="http://yoursite.com/ssn1125.win/temp.png">
 
 
 
@@ -317,7 +317,7 @@
       
 
       
-        <h5 id="先上效果图"><a href="#先上效果图" class="headerlink" title="先上效果图"></a>先上效果图</h5><p><img src="image/temp.png" alt="我是图"><br><a id="more"></a><br>演示地址：<a href="http://mainline.cn/mainline/admin/finance/forecastPrice.jsp" target="_blank" rel="external">http://mainline.cn/mainline/admin/finance/forecastPrice.jsp</a></p>
+        <h5 id="先上效果图"><a href="#先上效果图" class="headerlink" title="先上效果图"></a>先上效果图</h5><p><img src="ssn1125.win/temp.png" alt="我是图"><br><a id="more"></a><br>演示地址：<a href="http://mainline.cn/mainline/admin/finance/forecastPrice.jsp" target="_blank" rel="external">http://mainline.cn/mainline/admin/finance/forecastPrice.jsp</a></p>
 <h5 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input id=<span class="string">"start"</span> <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"form.startCode"</span> class=<span class="string">"form-control"</span>/&gt;</div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	$(<span class="string">'#start'</span>).autocomplete(&#123;</div><div class="line">		<span class="built_in">source</span> : <span class="keyword">function</span>(query, process) &#123;</div><div class="line">			$.post(<span class="string">"请求URL"</span>, 请求参数, <span class="keyword">function</span>(respData) &#123;</div><div class="line">            <span class="built_in">return</span> process(respData);  //调用process函数 传入请求响应的json数据 渲染input标签</div><div class="line">			&#125;);</div><div class="line">		&#125;,      </div><div class="line">		formatItem : <span class="keyword">function</span>(item) &#123;</div><div class="line">        	// 格式化提示内容</div><div class="line">			<span class="built_in">return</span> item[<span class="string">"json属性字段"</span>] + <span class="string">"("</span> + item[<span class="string">"json属性字段"</span>] + <span class="string">"，"</span></div><div class="line">					+ item[<span class="string">"json属性字段"</span>] + <span class="string">") - "</span> + item[<span class="string">"json属性字段"</span>];</div><div class="line">		&#125;,</div><div class="line">		<span class="built_in">set</span>Value : <span class="keyword">function</span>(item) &#123;</div><div class="line">        	// 设置文本框文本值与实际值</div><div class="line">			<span class="built_in">return</span> &#123;</div><div class="line">				<span class="string">'data-value'</span> : item[<span class="string">"chineseName"</span>],</div><div class="line">				<span class="string">'real-value'</span> : item[<span class="string">"fourCode"</span>]</div><div class="line">			&#125;;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>js文件下载地址：<a href="https://www.oschina.net/action/code/download?code=19025&amp;id=31528" target="_blank" rel="external">boostrap.autocomplete.js</a></p>
