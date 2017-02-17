@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript Boostrap," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="序列化表单对象即可实现ajax整个表单的提交，序列化表单的好处是可以帮我们精简代码，方便ajax传递表单值给服务端，避免了频繁的获取表单元素值。
-使用jQuery.post 提交form1$.post(url, $(&apos;#formID&apos;).serialize() , callback, ResultType);">
+<meta name="description" content="先上效果图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用AJAX提交整个表单">
-<meta property="og:url" content="http://yoursite.com/2017/01/21/hello-world/index.html">
+<meta property="og:title" content="Boostrap之文本框输入提示 - Autocomplete">
+<meta property="og:url" content="http://yoursite.com/2017/02/17/bootstrap-autocomplete/index.html">
 <meta property="og:site_name" content="LICHENֹ">
-<meta property="og:description" content="序列化表单对象即可实现ajax整个表单的提交，序列化表单的好处是可以帮我们精简代码，方便ajax传递表单值给服务端，避免了频繁的获取表单元素值。
-使用jQuery.post 提交form1$.post(url, $(&apos;#formID&apos;).serialize() , callback, ResultType);">
-<meta property="og:updated_time" content="2017-01-21T07:42:46.922Z">
+<meta property="og:description" content="先上效果图">
+<meta property="og:updated_time" content="2017-02-17T07:06:53.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用AJAX提交整个表单">
-<meta name="twitter:description" content="序列化表单对象即可实现ajax整个表单的提交，序列化表单的好处是可以帮我们精简代码，方便ajax传递表单值给服务端，避免了频繁的获取表单元素值。
-使用jQuery.post 提交form1$.post(url, $(&apos;#formID&apos;).serialize() , callback, ResultType);">
+<meta name="twitter:title" content="Boostrap之文本框输入提示 - Autocomplete">
+<meta name="twitter:description" content="先上效果图">
 
 
 
@@ -124,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/21/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/17/bootstrap-autocomplete/"/>
 
 
 
 
 
-  <title> 使用AJAX提交整个表单 | LICHENֹ </title>
+  <title> Boostrap之文本框输入提示 - Autocomplete | LICHENֹ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/21/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/17/bootstrap-autocomplete/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="申穗楠">
@@ -267,7 +264,7 @@
             
             
               
-                使用AJAX提交整个表单
+                Boostrap之文本框输入提示 - Autocomplete
               
             
           </h1>
@@ -282,8 +279,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-21T14:32:09+08:00">
-                2017-01-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T14:04:13+08:00">
+                2017-02-17
               </time>
             
 
@@ -318,10 +315,12 @@
       
 
       
-        <p>序列化表单对象即可实现ajax整个表单的提交，序列化表单的好处是可以帮我们精简代码，方便ajax传递表单值给服务端，避免了频繁的获取表单元素值。</p>
-<h2 id="使用jQuery-post-提交form"><a href="#使用jQuery-post-提交form" class="headerlink" title="使用jQuery.post 提交form"></a>使用jQuery.post 提交form</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.post(url, $(<span class="string">'#formID'</span>).serialize() , callback, ResultType);</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="使用jQuery-ajax-提交form"><a href="#使用jQuery-ajax-提交form" class="headerlink" title="使用jQuery.ajax 提交form"></a>使用jQuery.ajax 提交form</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">	cache: <span class="literal">true</span>,</div><div class="line">	<span class="built_in">type</span>: <span class="string">"POST"</span>,</div><div class="line">	url: <span class="string">"ssn1125.win"</span>,</div><div class="line">	data: $(<span class="string">'#form1'</span>).serialize(),    // 你的formid</div><div class="line">	async: <span class="literal">false</span>,</div><div class="line">	error: <span class="keyword">function</span>(request) &#123;</div><div class="line">		...</div><div class="line">	&#125;,</div><div class="line">	success: <span class="keyword">function</span>(data) &#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <h5 id="先上效果图"><a href="#先上效果图" class="headerlink" title="先上效果图"></a>先上效果图</h5><p><img src="" alt="我是图"><br><a id="more"></a><br>演示地址：<a href="http://mainline.cn/mainline/admin/finance/forecastPrice.jsp" target="_blank" rel="external">http://mainline.cn/mainline/admin/finance/forecastPrice.jsp</a></p>
+<h5 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input id=<span class="string">"start"</span> <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"form.startCode"</span> class=<span class="string">"form-control"</span>/&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	$(<span class="string">'#start'</span>).autocomplete(&#123;</div><div class="line">		<span class="built_in">source</span> : <span class="keyword">function</span>(query, process) &#123;</div><div class="line">			$.post(<span class="string">"请求URL"</span>, 请求参数, <span class="keyword">function</span>(respData) &#123;</div><div class="line">            <span class="built_in">return</span> process(respData);  //调用process函数 传入请求响应的json数据 渲染input标签</div><div class="line">			&#125;);</div><div class="line">		&#125;,      </div><div class="line">		formatItem : <span class="keyword">function</span>(item) &#123;</div><div class="line">        	// 格式化提示内容</div><div class="line">			<span class="built_in">return</span> item[<span class="string">"json属性字段"</span>] + <span class="string">"("</span> + item[<span class="string">"json属性字段"</span>] + <span class="string">"，"</span></div><div class="line">					+ item[<span class="string">"json属性字段"</span>] + <span class="string">") - "</span> + item[<span class="string">"json属性字段"</span>];</div><div class="line">		&#125;,</div><div class="line">		<span class="built_in">set</span>Value : <span class="keyword">function</span>(item) &#123;</div><div class="line">        	// 设置文本框文本值与实际值</div><div class="line">			<span class="built_in">return</span> &#123;</div><div class="line">				<span class="string">'data-value'</span> : item[<span class="string">"chineseName"</span>],</div><div class="line">				<span class="string">'real-value'</span> : item[<span class="string">"fourCode"</span>]</div><div class="line">			&#125;;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>js文件下载地址：<a href="https://www.oschina.net/action/code/download?code=19025&amp;id=31528" target="_blank" rel="external">boostrap.autocomplete.js</a></p>
+<p>参考博文：<a href="https://www.oschina.net/code/snippet_219811_19025" target="_blank" rel="external">https://www.oschina.net/code/snippet_219811_19025</a></p>
+
       
     </div>
 
@@ -342,20 +341,26 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript-Boostrap/" rel="tag"># javascript Boostrap</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/21/htmlTemplate/" rel="next" title="使用优雅的方式实现html拼接">
+                <i class="fa fa-chevron-left"></i> 使用优雅的方式实现html拼接
+              </a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/21/htmlTemplate/" rel="prev" title="使用优雅的方式实现html拼接">
-                使用优雅的方式实现html拼接 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -471,7 +476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用jQuery-post-提交form"><span class="nav-number">1.</span> <span class="nav-text">使用jQuery.post 提交form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用jQuery-ajax-提交form"><span class="nav-number">2.</span> <span class="nav-text">使用jQuery.ajax 提交form</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#先上效果图"><span class="nav-number">1.</span> <span class="nav-text">先上效果图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码如下："><span class="nav-number">2.</span> <span class="nav-text">代码如下：</span></a></li></ol></div>
             
 
           </div>
