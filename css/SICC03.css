@@ -1,0 +1,28 @@
+body {
+	padding: 5px;
+	padding-right: 20px;
+	font-family: "微软雅黑";
+}
+
+#mainBox {
+	border: 1px #E0E0E0 solid; 
+	height: ;
+	background-color: #FAFAFA;
+}
+
+.form-inline .form-group {
+	margin-right: 50px;
+	padding-top:5px;
+	padding-left: 10px;
+}
+
+.dataImage {
+	text-align: center;
+}
+
+
+/* 通配符的类选择器 */
+[class*='col-'] {
+	height: 100%;
+	border: 1px solid #DDDDDD;
+}
