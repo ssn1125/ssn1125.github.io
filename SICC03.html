@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script type="text/javascript" src="js/html5shiv.min.js" ></script> <!-- 使浏览器完全支持html5标签 -->
+  		<link href="css/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap 核心 CSS 文件 -->
+	    <script src="js/jquery-1.9.0.min.js"></script>		<!-- jQuery文件。务必在bootstrapminjs 之前引入 -->
+		<script src="js/echarts.js"></script> <!-- echarts 统计图JS文件 -->
+		<title>资材备件库存统计DEMO</title> 
+	</head>
+	<body>
+		<div id="mainBox" class="container-fluid">
+			<div class="row">
+				<!--内联表单   表单中元素不换行-->
+				<form class="form-inline">
+					<div class="form-group">
+						<label>查询类型：</label>
+						<input name="queryType" class="" type="radio" value="" />全部　
+						<input name="queryType" class="" type="radio" value="" />有库存　
+						<input name="queryType" class="" type="radio" value="" />无库存
+					</div>
+					<div class="form-group">
+						<label>资源性质：</label>
+						<input name="sourceType" class="" type="radio" value="" />采购　
+						<input name="sourceType" class="" type="radio" value="" />寄存
+					</div>
+					
+					<div class="form-group">
+						<label>统计分类：</label>
+						<input name="classification" class="" type="radio" value="" />仓库　
+						<input name="classification" class="" type="radio" value="" />部门　
+						<input name="classification" class="" type="radio" value="" />资材小类　
+						<input name="classification" class="" type="radio" value="" />资材大类　
+					</div>
+					<div class="form-group">
+						<label>SQL：</label>
+						<input type="text" class="form-control" size="95%" id="querySqlInp" />
+						<button class="btn-info form-control" onclick="callMethod('query',querySqlInp.value)">执行</button>
+					</div>
+				</form>
+			</div>
+			<!--  -->
+			<div class="row">
+				<ol class="breadcrumb">
+				  <li class="active">筛选条件</li>
+				  <li class=""><a>全部</a></li>
+				  <li class=""><a>采购</a></li>
+				  <li class=""><a>仓库</a></li>
+				</ol> 
+			</div>
+			<div class="row" style="border: 1px node solid; margin: 1px;height: 350px;margin-top:-15px;">
+				<div class="col-xs-12">
+					<!-- 为echart提供一个具有大小(宽高)的dom--> 
+					<div id="main" style="border: 1px none bisque;height: 400px;margin-left: -30px;"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/Required.js" ></script>
+	<script type="text/javascript" src="js/SI/SICC03.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/SI/SICC03.css"/>	
+	
+</html>
